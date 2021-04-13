@@ -1,0 +1,14 @@
+- var viewPost = "/post/";
+- var updatePost = "/update/";
+- var deletePost = "/delete/";
+ul
+  each val in items
+    li 
+      a(href= viewPost + val.id) #{val.textPost}
+      ul 
+        li 
+          a(href= updatePost + val.id) Update
+        li 
+          a(href= deletePost + val.id) Delete
+  else
+    li No posts to show

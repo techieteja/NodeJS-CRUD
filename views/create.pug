@@ -1,0 +1,16 @@
+form#CreatePost(method="post", onsubmit="event.preventDefault(); validateForm();") 
+    input#textPost(type="text", name="textPost", placeholder="Write Something...")
+    input(type="submit")
+
+script.
+    var textPost = document.getElementById("textPost")
+    var form = document.getElementById("CreatePost")
+
+    function validateForm() {
+        if(textPost.value == "" || textPost.value == null){
+            alert("Empty post");
+        }else{
+            form.submit();
+        }
+            
+    }
