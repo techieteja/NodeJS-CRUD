@@ -16,7 +16,7 @@ app.set('views', './views');
 // Import static files
 app.use(express.static(path.join(__dirname, "public")));
 
-// Body parser extracts the entire body of an incoming request and exposes it on req. body
+// Body parser extracts the entire body of an incoming request and exposes it on req.body
 app.use(express.urlencoded({ extended: false }));
 
 // Router import GET & POST Reuqests
